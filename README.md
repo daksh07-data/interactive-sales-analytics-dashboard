@@ -2,6 +2,8 @@
 Interactive Power BI dashboard built using the Superstore dataset to analyze sales performance, profit trends, regional insights, and top-selling products. The project includes KPI cards, dynamic slicers, maps, trend analysis, and interactive visualizations for business decision-making.
 
 ── SQL Queries/
+
+
 SELECT COUNT(*) AS total_rows
 FROM sales_project;
 SELECT
@@ -12,12 +14,16 @@ SELECT
     Profit,
     Region
 FROM sales_project
+
+
 LIMIT 10;
 SELECT
     ROUND(SUM(Sales),2) AS total_sales
 FROM sales_project;
 SELECT
     ROUND(SUM(Profit),2) AS total_profit
+
+
 FROM sales_project;
 SELECT
     Category,
@@ -25,12 +31,15 @@ SELECT
 FROM sales_project
 GROUP BY Category
 ORDER BY total_sales DESC;
+
 SELECT
     Region,
     ROUND(SUM(Profit),2) AS total_profit
 FROM sales_project
 GROUP BY Region
 ORDER BY total_profit DESC;
+
+
 SELECT
     `Product Name`,
     ROUND(SUM(Sales),2) AS total_sales
